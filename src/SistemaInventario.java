@@ -1,7 +1,7 @@
 package AppInventario.src;
 public class SistemaInventario {
     
-    public static void main(string[] args) {
+    public static void main(String[] args) {
 
         InterfazUsuario ui = new InterfazUsuario();
 
@@ -9,9 +9,9 @@ public class SistemaInventario {
 
         GestorInventario gestorInventario = new GestorInventario(tamano);
 
-        ValidadorMovimiento validador = new ValidadorMovimiento()
+        ValidadorMovimiento validador = new ValidadorMovimiento(gestorInventario);
 
-        GestorMovimiento(gestorInventario, validador);
+        GestorMovimiento gestorMovimiento = new GestorMovimiento(gestorInventario, validador);
 
         ui.setGestores(gestorInventario, gestorMovimiento, validador);
 
