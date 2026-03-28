@@ -1,4 +1,10 @@
+package co.edu.tdea;
 
+/**
+ * Estructura de datos de tamanio fijo para almacenar productos.
+ *
+ * @author Juan Camilo
+ */
 public class ArregloProductos {
 
     private Producto[] productos;

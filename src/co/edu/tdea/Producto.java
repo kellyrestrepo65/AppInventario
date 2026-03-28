@@ -1,4 +1,11 @@
+package co.edu.tdea;
 
+/**
+ * Representa un producto del inventario.
+ * Contiene codigo, nombre, cantidad actual y cantidad minima.
+ *
+ * @author Juan Camilo
+ */
 public class Producto {
 
     public String codigo;
@@ -11,7 +18,6 @@ public class Producto {
         setNombre(nombre);
         setCantidadActual(cantidadActual);
         setCantidadMinima(cantidadMinima);
-
     }
 
     public String getCodigo() {
@@ -28,6 +34,20 @@ public class Producto {
 
     public int getCantidadMinima() {
         return cantidadMinima;
+    }
+
+    /**
+     * Alias de getCantidadActual(). Requerido por GestorMovimiento y ValidadorMovimiento.
+     */
+    public int getCantidad() {
+        return cantidadActual;
+    }
+
+    /**
+     * Alias de setCantidadActual(). Requerido por GestorMovimiento y ValidadorMovimiento.
+     */
+    public void setCantidad(int cantidad) {
+        setCantidadActual(cantidad);
     }
 
     public void setCodigo(String codigo) {
@@ -75,5 +95,4 @@ public class Producto {
                 + ", cantidadMinima=" + cantidadMinima
                 + '}';
     }
-
 }
